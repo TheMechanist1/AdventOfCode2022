@@ -21,11 +21,6 @@ public class PartTwo {
             //z WIN
             if(opponentTurn == 'a') { //Rock
                 switch (myTurn) {
-                    case 'z' -> {
-                        //Win, must be Paper
-                        total += 6;
-                        total += 2;
-                    }
                     case 'x' -> {
                         //Lose, must be Scissor
                         total += 0;
@@ -36,14 +31,14 @@ public class PartTwo {
                         total += 3;
                         total += 1;
                     }
+                    case 'z' -> {
+                        //Win, must be Paper
+                        total += 6;
+                        total += 2;
+                    }
                 }
             } else if (opponentTurn == 'b') { //Paper
                 switch (myTurn) {
-                    case 'z' -> {
-                        //Win, must be Scissor
-                        total += 6;
-                        total += 3;
-                    }
                     case 'x' -> {
                         //Lose, must be Rock
                         total += 0;
@@ -54,14 +49,14 @@ public class PartTwo {
                         total += 3;
                         total += 2;
                     }
+                    case 'z' -> {
+                        //Win, must be Scissor
+                        total += 6;
+                        total += 3;
+                    }
                 }
             } else if (opponentTurn == 'c') { //Scissor
                 switch (myTurn) {
-                    case 'z' -> {
-                        //Win, must be Rock
-                        total += 6;
-                        total += 1;
-                    }
                     case 'x' -> {
                         //Lose, must be Paper
                         total += 0;
@@ -71,6 +66,11 @@ public class PartTwo {
                         //Draw, must be Scissor
                         total += 3;
                         total += 3;
+                    }
+                    case 'z' -> {
+                        //Win, must be Rock
+                        total += 6;
+                        total += 1;
                     }
                 }
             }
