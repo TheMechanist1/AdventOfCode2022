@@ -2,10 +2,9 @@ package daytemplate;
 
 public class DayNumber
 {
-    public static String partOnePuzzleInput = "";
-    public static String partTwoPuzzleInput = "";
-    public static PartOne partOne = new PartOne(partOnePuzzleInput);
-    public static PartTwo partTwo = new PartTwo(partTwoPuzzleInput);
+    public static String puzzleInput = "";
+    public static PartOne partOne = new PartOne(puzzleInput);
+    public static PartTwo partTwo = new PartTwo(puzzleInput);
 
     public static void main( String[] args )
     {
@@ -14,12 +13,12 @@ public class DayNumber
                 │                                Part 1 Output                                │
                 └─────────────────────────────────────────────────────────────────────────────┘
                 """);
-        System.out.println(partOne.methodNameHere());
+        System.out.println(partOne.parsePuzzleInput());
         System.out.println("""
                 ┌─────────────────────────────────────────────────────────────────────────────┐
                 │                                Part 2 Output                                │
                 └─────────────────────────────────────────────────────────────────────────────┘
                 """);
-        System.out.println(partTwo.methodNameHere());
+        System.out.println(partTwo.parsePuzzleInput());
     }
 }

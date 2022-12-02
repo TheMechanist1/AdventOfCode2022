@@ -7,7 +7,7 @@ public class PartOne {
     }
 
     //TODO: Explanation of solution
-    public String methodNameHere() {
+    public String parsePuzzleInput() {
         return puzzleInput;
     }
 }
