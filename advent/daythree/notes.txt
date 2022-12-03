@@ -1,0 +1,11 @@
+Sack has 2 Compartments
+All items of type go into one compartment
+failed to follow this rule for exactly one item type per rucksack
+Every item type is identified by a single lowercase or uppercase letter (A and a are diffrent)
+A given rucksack always has the same number of items in each of its two compartments
+
+first half of the characters represent items in the first compartment
+while the second half of the characters represent items in the second compartment
+
+Lowercase item types a through z have priorities 1 through 26.
+Uppercase item types A through Z have priorities 27 through 52.
