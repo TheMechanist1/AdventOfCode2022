@@ -75,19 +75,40 @@ for i in range(len(pairs)):
         print(jPair + "\n")
         continue
 
-   # print(iPair)
-    #print(jPair + "\n")
+    partTwoCount = 0
 
-    #print(pairs[i][0], pairs[i][1], pairs[j][0], pairs[j][1])
+    #Does the first pair overlap with the second pair?
+    if(currentPair[0] <= currentPair[2] and currentPair[1] >= currentPair[2]):
+        partTwoCount += 1
+        print("Overlapping")
+        print(iPair)
+        print(jPair + "\n")
+        continue
 
-    
-      
+    #Does the second pair overlap with the first pair?
+    if(currentPair[2] <= currentPair[0] and currentPair[3] >= currentPair[0]):
+        partTwoCount += 1
+        print("Overlapping")
+        print(iPair)
+        print(jPair + "\n")
+        continue
 
+    #Does the first pair overlap with the second pair?
+    if(currentPair[0] <= currentPair[3] and currentPair[1] >= currentPair[3]):
+        partTwoCount += 1
+        print("Overlapping")
+        print(iPair)
+        print(jPair + "\n")
+        continue
 
-
-
-print(pairs)
-
+    #Does the second pair overlap with the first pair?
+    if(currentPair[2] <= currentPair[1] and currentPair[3] >= currentPair[1]):
+        partTwoCount += 1
+        print("Overlapping")
+        print(iPair)
+        print(jPair + "\n")
+        continue
 
 # Print the result
 print(count)
+print(partTwoCount)
