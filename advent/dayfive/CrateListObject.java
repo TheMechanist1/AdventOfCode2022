@@ -74,6 +74,15 @@ public class CrateListObject {
         return movingCrates;
     }
 
+    public char[] getCrateTopToBottomReversed(int stackNumber, int amount) {
+        char[] movingCrates = new char[amount];
+        int topIndex = getIndexOfFirstEmptySlot(stackNumber);
+        for (int i = 0; i < amount; i++) {
+            movingCrates[i] = crates[stackNumber][topIndex-i-1];
+        }
+        return reverseCrates(movingCrates);
+    }
+
     public void removeCrates(int stackNumber, char[] newCrates) {
         int topIndex = getIndexOfFirstEmptySlot(stackNumber);
         for (int i = 0; i < newCrates.length; i++) {

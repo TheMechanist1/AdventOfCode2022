@@ -49,7 +49,7 @@ public class DayFive
             int toStackNumber = ints.get(i+2) - 1;
             System.out.println("Instruction " + iterationNumber + ": " + numOfBoxes + " from " + fromStackNumber + " to " + toStackNumber);
             System.out.println("Number of creates: " + crates.getNumberOfFilledCrates());
-            char[] crateTemp = crates.getCrateTopToBottom(fromStackNumber, numOfBoxes);
+            char[] crateTemp = crates.getCrateTopToBottomReversed(fromStackNumber, numOfBoxes);
             crates.removeCrates(fromStackNumber, crateTemp);
             crates.setCrates(toStackNumber, crateTemp);
             System.out.println("Number of creates: " + crates.getNumberOfFilledCrates());
