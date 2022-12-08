@@ -1,24 +1,25 @@
 package daytemplate;
 
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileReader;
+import java.io.IOException;
+
 public class DayNumber
 {
-    public static String puzzleInput = "";
-    public static PartOne partOne = new PartOne(puzzleInput);
-    public static PartTwo partTwo = new PartTwo(puzzleInput);
-
+    public static File inputFile = new File("daytemplate//input.txt");
     public static void main( String[] args )
     {
-        System.out.println("""
-                ┌─────────────────────────────────────────────────────────────────────────────┐
-                │                                Part 1 Output                                │
-                └─────────────────────────────────────────────────────────────────────────────┘
-                """);
-        System.out.println(partOne.parsePuzzleInput());
-        System.out.println("""
-                ┌─────────────────────────────────────────────────────────────────────────────┐
-                │                                Part 2 Output                                │
-                └─────────────────────────────────────────────────────────────────────────────┘
-                """);
-        System.out.println(partTwo.parsePuzzleInput());
+        try {
+            BufferedReader bufferedReader = new BufferedReader(new FileReader(inputFile));
+            String line;
+            while((line = bufferedReader.readLine()) != null) {
+                System.out.println(line);
+            }
+
+            bufferedReader.close();
+        } catch (IOException ioException) {
+            System.out.println("File does not exist");
+        }
     }
 }
