@@ -12,4 +12,9 @@ public class HelperFunctions {
             System.out.println(i);
         }
     }
+
+    public static void printDebug(String s) {
+        //Print debug statements
+        System.out.println("[Debug] " + s);
+    }
 }
